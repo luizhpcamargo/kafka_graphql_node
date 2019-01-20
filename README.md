@@ -12,10 +12,15 @@ brew services start kafka
 # Configuring
 
 sudo mkdir -p /usr/local/var/run/zookeeper/data
+
 sudo chmod 777 /usr/local/var/run/zookeeper/data
+
 zkServer start
+
 mkdir -p /usr/local/var/lib/kafka-logs
+
 sudo chmod 777 /usr/local/var/lib/kafka-logs
+
 /usr/local/Cellar/kafka/2.1.0/libexec/bin/kafka-server-start.sh /usr/local/etc/kafka/server.properties
 
 Please add the `advertised.host.name = localhost` configuration in `/usr/local/etc/kafka/server.properties` to proceed with local tests
